@@ -8,16 +8,28 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["node"],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/src/*": ["/pages/*"],
+      "@/layout/*": ["src/Components/layout/*"],
+      "@/module/*": ["src/Components/module/*"],
+      "@/templates/*": ["src/Components/templates/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/api/*": ["src/pages/api*"],
+      "@/utils/*": ["utils/*"],
+      "@/models/*": ["src/models/*"],
+      "@/types/*": ["src/types/*"],
+      "@/Redux/*": ["src/Redux/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/Redux/store.tsx", "src/Redux/fetchare/ShoppSlice.tsx"],
   "exclude": ["node_modules"]
 }
